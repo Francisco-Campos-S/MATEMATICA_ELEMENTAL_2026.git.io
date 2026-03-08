@@ -184,6 +184,51 @@
       background: #e8ecf0; color: #aaa; cursor: not-allowed; pointer-events: none;
     }
 
+    /* ---- CARTA AL ESTUDIANTE ---- */
+    .carta-wrap {
+      max-width: 860px;
+      margin: 36px auto 0;
+      padding: 0 36px;
+    }
+    .carta-box {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 3px 16px rgba(0,0,0,.09);
+      padding: 32px 36px;
+      border-left: 6px solid var(--oro);
+      position: relative;
+      overflow: hidden;
+    }
+    .carta-box::before {
+      content: '\201C';
+      position: absolute; top: -10px; left: 24px;
+      font-size: 8em; color: var(--oro); opacity: .08;
+      font-family: Georgia, serif; line-height: 1;
+      pointer-events: none;
+    }
+    .carta-box .carta-titulo {
+      display: flex; align-items: center; gap: 10px;
+      margin-bottom: 16px;
+    }
+    .carta-box .carta-titulo span {
+      font-size: 1.4em;
+    }
+    .carta-box .carta-titulo h2 {
+      margin: 0; color: var(--azul); font-size: 1.1em;
+    }
+    .carta-box p {
+      margin: 0 0 12px; color: #444; font-size: .95em;
+      line-height: 1.75;
+    }
+    .carta-box p:last-child { margin-bottom: 0; }
+    .carta-firma {
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px dashed #dde;
+      font-size: .88em; color: #666;
+    }
+    .carta-firma strong { color: var(--azul); }
+
     /* ---- DIVISOR ---- */
     .section-divider {
       max-width: 1100px; margin: 0 auto;
@@ -319,6 +364,36 @@
   <span class="dot"></span>
   <span>Escuela de Matemática &nbsp;·&nbsp; Actividades de práctica por semana</span>
   <span class="dot"></span>
+</div>
+
+<!-- ============================
+     CARTA AL ESTUDIANTE
+     ============================ -->
+<div class="acordeon-wrap" style="margin-top:28px; margin-bottom:0;">
+  <div class="acord-item" id="acord-carta">
+    <div class="acord-header" onclick="toggleAcord('acord-carta')">
+      <div class="acord-num" style="background:var(--oro);">📝</div>
+      <div class="acord-title">
+        <strong>Carta al estudiante</strong>
+        <span>Bienvenida e información del curso</span>
+      </div>
+      <span class="acord-badge ok">Leer</span>
+      <span class="acord-chevron">▼</span>
+    </div>
+    <div class="acord-body">
+      <div style="padding: 14px 0 4px;">
+        <iframe src="Carta%20MA0125%20-%20IC%20-%202026-2.pdf"
+                style="width:100%; height:520px; border:none; border-radius:8px;"
+                title="Carta al Estudiante MA-0125"></iframe>
+        <div style="text-align:right; margin-top:8px;">
+          <a href="Carta%20MA0125%20-%20IC%20-%202026-2.pdf" target="_blank"
+             style="font-size:.82em; color:var(--azul); font-weight:600; text-decoration:none;">
+            ↗ Abrir en nueva pestaña
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="section-title">
